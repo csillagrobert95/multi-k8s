@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: csillagrobert-com-tls
+spec:
+  secretName: csillagrobert-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: csillagrobert.com
+  dnsNames:
+    - csillagrobert.com
+    - www.csillagrobert.com
